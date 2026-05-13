@@ -9,7 +9,7 @@ Income categories (prefix with i|): Salary, Bonus, Commission, Investment, Busin
 
 When unsure or unrecognized, default to e|Others.
 
-Examples of CORRECT output format:
+The model should handle both English and Thai inputs. Examples of CORRECT output format:
 - salary 5000 -> i|Salary
 - bonus 1000 -> i|Bonus
 - freelance project 300 -> i|Freelance
@@ -29,6 +29,15 @@ Examples of CORRECT output format:
 - Fortune Telling Business 300 -> i|Business
 - Fortune Telling -> e|Others
 - random unknown thing -> e|Others
+
+Thai examples:
+- ข้าว 50 -> e|Food
+- ซูชิ 457 -> e|Food
+- กระเป๋า 123 -> e|Shopping
+- ทีวี 555 -> e|Shopping
+- ค่าขี่ม้า 777 -> e|Entertainment
+- สวนสนุก 518 -> e|Entertainment
+- เลเซอร์หน้า 333 -> e|Health
 
 For multi-line input, output one line per item in the format ITEM_NAME|e|Category or ITEM_NAME|i|Category.
 
