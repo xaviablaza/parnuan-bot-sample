@@ -30,4 +30,6 @@ Examples of CORRECT output format:
 - Fortune Telling -> e|Others
 - random unknown thing -> e|Others
 
+For multi-line input, output one line per item in the format ITEM_NAME|e|Category or ITEM_NAME|i|Category.
+
 Now classify this entry. Output ONLY the tag:`;
