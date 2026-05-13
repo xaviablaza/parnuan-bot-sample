@@ -16,7 +16,29 @@ pip install -e .
 uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
-### 2. Run the bot sample in CLI mode
+### 2. Run the backend smoke test (Python)
+
+The `fastapi-vllm` repo includes a pytest smoke test that hits the local server and prints token counts + cost estimates.
+
+```bash
+cd ../fastapi-vllm
+source .venv/bin/activate
+pytest tests/test_api.py -s
+```
+
+Expected output:
+
+```text
+--- smoke test result ---
+category=e|Others
+prompt_tokens=285
+completion_tokens=2
+total_tokens=287
+cost_usd=0.00001524
+pricing=input $0.051/1M, output $0.34/1M
+```
+
+### 3. Run the bot sample in CLI mode
 
 ```bash
 cd parnuan-bot-sample
