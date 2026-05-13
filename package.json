@@ -1,0 +1,24 @@
+{
+  "name": "parnuan-bot-sample",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "LINE bot sample using OpenRouter SDK against a local fastapi-vllm endpoint",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "classify": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^9.5.0",
+    "@openrouter/sdk": "^0.12.35",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
